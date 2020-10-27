@@ -1,0 +1,44 @@
+<%# 上部バー部分 %>
+
+<div class='header'>
+  <%= link_to 'トップページ', "#", class: "films-icon" %>
+  <div class='nav'>
+    <%= link_to 'ジャンル', "#", class: "category" %>
+  </div>
+  <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |f| %>
+    <%= f.text_field :keyword, class:'input-box', placeholder: 'キーワードから探す' %>
+    <button class="search-button">
+      <%= image_tag "search.png", class:"search-icon" %>
+    </button>
+  <% end %>
+  <ul class='user-management'>
+    <%# <% if user_signed_in? %> 
+    <%# liタグ抜けてる %>
+      <%# <%= link_to current_user.nickname, "#", class: "" %> 
+      <%# <%= link_to 'ログアウト', "#", class: "" %> 
+    <%# <% else %> 
+      <li><%= link_to 'ログイン', "#", class: "login" %></li>
+      <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
+    <%# <% end %> 
+  </ul>
+
+</div>
+
+<%# 上部バー部分 %>
+
+<%# 広告部分 %>
+
+<div class='add-header-contents'>
+  <h2 class='header-service-title'>
+    F i l m s
+  </h2>
+  <p class='header-service-explain'>
+    〜観たい映画がきっと見つかる〜
+  </p>
+  <div class='store-btn'>
+    <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+    <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+  </div>
+</div>
+
+<%# 広告部分 %>

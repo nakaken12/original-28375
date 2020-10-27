@@ -19,7 +19,7 @@
 | content | text   | null: false | 
 | spoiler | boolean |
 | rate | float |
-| category_id | integer | null: false |
+| genre_id | integer | null: false |
 | user  | references | null: false, foreign_key: true |
 | title | references | null: false, foreign_key: true |
 

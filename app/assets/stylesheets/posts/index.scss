@@ -1,0 +1,39 @@
+// Filmsとは
+.feature {
+  background-color: #eeeeee;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.9);
+  padding: 5vh 0;
+}
+
+.feature-title {
+  font-size: 3.5vh;
+}
+
+.horizon {
+  width: 25vw;
+  border: solid 1px #cc3300;
+  border-bottom: 1.5vh;
+}
+
+.second-feature-title {
+  width: 50vw;
+  line-height: 8vh;
+  text-align: center;
+}
+// Filmsとは
+
+// 投稿一覧
+.post-contents {
+  padding: 5vh 0;
+}
+
+.title {
+  font-size: 4vh;
+  text-align: center;
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.9);
+}
+// 投稿一覧
