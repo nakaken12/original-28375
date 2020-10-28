@@ -1,5 +1,22 @@
 <%= render "shared/header" %>
 
+<%# 広告部分 %>
+
+<div class='add-header-contents'>
+  <h2 class='header-service-title'>
+    F i l m s
+  </h2>
+  <p class='header-service-explain'>
+    〜観たい映画がきっと見つかる〜
+  </p>
+  <div class='store-btn'>
+    <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+    <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+  </div>
+</div>
+
+<%# 広告部分 %>
+
 <%# Filmsとは %>
 
 <div class='feature'>

@@ -1,10 +1,11 @@
 <%# 上部バー部分 %>
 
 <div class='header'>
-  <%= link_to 'トップページ', "#", class: "films-icon" %>
-  <div class='nav'>
-    <%= link_to 'ジャンル', "#", class: "category" %>
-  </div>
+  <%= link_to 'トップページ', "/", class: "header-left" %>
+  <%= link_to 'ジャンル', "#", class: "header-left" %>
+  <% if user_signed_in? %>
+    <%= link_to '投稿する', "#", class: "header-left" %>
+  <% end %>
   <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |f| %>
     <%= f.text_field :keyword, class:'input-box', placeholder: 'キーワードから探す' %>
     <button class="search-button">
@@ -12,33 +13,14 @@
     </button>
   <% end %>
   <ul class='user-management'>
-    <%# <% if user_signed_in? %> 
-    <%# liタグ抜けてる %>
-      <%# <%= link_to current_user.nickname, "#", class: "" %> 
-      <%# <%= link_to 'ログアウト', "#", class: "" %> 
-    <%# <% else %> 
-      <li><%= link_to 'ログイン', "#", class: "login btn btn-primary" %></li>
-      <li><%= link_to '新規登録', "#", class: "sign-up btn btn-success" %></li>
-    <%# <% end %> 
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout btn btn-danger" %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login btn btn-primary" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up btn btn-success" %></li>
+    <% end %>
   </ul>
-
 </div>
 
 <%# 上部バー部分 %>
-
-<%# 広告部分 %>
-
-<div class='add-header-contents'>
-  <h2 class='header-service-title'>
-    F i l m s
-  </h2>
-  <p class='header-service-explain'>
-    〜観たい映画がきっと見つかる〜
-  </p>
-  <div class='store-btn'>
-    <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
-    <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
-  </div>
-</div>
-
-<%# 広告部分 %>

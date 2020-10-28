@@ -17,6 +17,19 @@
  .user-management {
    display: flex;
    justify-content: center;
+   align-items: center;
+ }
+
+ .user-nickname {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1vw;
+ }
+
+ .logout {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1vw;
  }
 
  .login {

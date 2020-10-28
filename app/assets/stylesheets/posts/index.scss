@@ -1,3 +1,43 @@
+/* 広告部分 */
+.add-header-contents {
+  width: 100vw;
+  height: 85vh;
+  background-image: image-url('films-header-back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  text-shadow: 0 0 6px rgba(0, 0, 1, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-service-title {
+  font-size: 7vh;
+  color: #fff;
+}
+
+.header-service-explain {
+  color: #fff;
+}
+
+
+.store-btn {
+  margin-top: 24px;
+
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+/* 広告部分 */
+
 // Filmsとは
 .feature {
   background-color: #eeeeee;
