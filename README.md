@@ -27,7 +27,7 @@
 - belongs_to :user
 - has_many :reactions
 - belongs_to :title
-- belongs_to_active_hash :category
+- belongs_to_active_hash :genre
 
 ## reactions テーブル
 
