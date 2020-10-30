@@ -6,7 +6,7 @@
     <%= form_with model: @post, url: posts_path, class:"new_posts", method: :post, local: true do |f| %>
 
     <%# エラー文 %>
-    <%# <%= render 'shared/error_messages', model: f.object %> 
+    <%= render 'shared/error_messages', model: f.object %>
 
     <%# タイトル名 %>
     <div class="weight-bold-text">
