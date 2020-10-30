@@ -1,5 +1,5 @@
 class Title < ApplicationRecord
   has_many :posts
 
-  validates :name, uniqueness: { case_sensitive: true }
+  validates :title_name, uniqueness: { case_sensitive: true }
 end

@@ -4,7 +4,7 @@
   <%= link_to 'トップページ', "/", class: "header-left" %>
   <%= link_to 'ジャンル', "#", class: "header-left" %>
   <% if user_signed_in? %>
-    <%= link_to '投稿する', "#", class: "header-left" %>
+    <%= link_to '投稿する', new_post_path, class: "header-left" %>
   <% end %>
   <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |f| %>
     <%= f.text_field :keyword, class:'input-box', placeholder: 'キーワードから探す' %>

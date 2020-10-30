@@ -1,9 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="parents-form-wrap">
-</li>
-
-<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @user, url: user_session_path, local: true do |f| %>
   <div class='form-wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
@@ -31,8 +28,5 @@
     </div>
   </div>
 <% end %>
-
-<div class="parents-form-wrap">
-</li>
 
 <%= render "shared/footer" %>

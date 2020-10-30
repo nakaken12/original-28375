@@ -44,7 +44,7 @@
 
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
-| name   | string | null: false |
+| title_name   | string | null: false |
 
 ### Association
 - has_many :posts

@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">新規投稿</h2>
+    <%= form_with model: @post, url: posts_path, class:"new_posts", method: :post, local: true do |f| %>
+
+    <%# エラー文 %>
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+
+    <%# タイトル名 %>
+    <div class="weight-bold-text">
+      タイトル名
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :title_name, class:"title-text", id:"item-name", placeholder:"タイトル名（必須 40文字まで)", maxlength:"40" %>
+    <%# タイトル名 %>
+
+    <%# ジャンル %>
+    <div class="posts-genre">
+      <div class="form">
+        <div class="weight-bold-text">
+          ジャンル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+    </div>
+    <%# /ジャンル %>
+      
+    <%# /レビュー %>
+    <div class="posts-review">
+      <div class="weight-bold-text">
+        鑑賞記録
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :content, class:"posts-text", id:"item-info", placeholder:"レビューを記入してください（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+    <%# /レビュー %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"btn btn-primary" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>
+
+<%= render "shared/footer" %>
