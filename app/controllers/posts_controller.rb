@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
-
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :set_post, only: [:edit, :update]
+  
   def index
     @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(5)
   end
@@ -20,11 +21,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
   
   def update
-    @post = Post.find(params[:id])
     if params[:post][:title_name] != ""
       @title = Title.find_by(title_name: params[:post][:title_name])
       if @title == nil
@@ -43,9 +42,9 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     if post.destroy
-      render :destroy
-    else
       redirect_to root_path
+    else
+      render :destroy
     end
   end
 
@@ -59,4 +58,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:genre_id, :content).merge(user_id: current_user.id)
   end
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
+  
 end
