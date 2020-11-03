@@ -33,11 +33,19 @@ class PostsController < ApplicationController
       @post.title_id = @title.id
       @post.save
     end
-    # binding.pry
     if @post.update(post_params)   
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      render :destroy
+    else
+      redirect_to root_path
     end
   end
 
