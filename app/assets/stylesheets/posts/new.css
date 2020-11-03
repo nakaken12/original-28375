@@ -1,7 +1,7 @@
 /* border-bottom: 1px solid #eee; */
 
 
-.items-sell-contents {
+.posts-sell-contents {
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
   width: 60%;
@@ -11,7 +11,7 @@
   box-shadow:5px 5px 15px;
 }
 
-.items-sell-main {
+.posts-sell-main {
   background-color: #FFF;
   padding: 30px 10vw;
   display: flex;
@@ -19,7 +19,7 @@
   flex-direction: column;
 }
 
-.items-sell-title {
+.posts-sell-title {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 30px;
