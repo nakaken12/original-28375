@@ -68,12 +68,86 @@
 
 // 投稿一覧
 .post-contents {
-  padding: 5vh 0;
+  padding: 5vh 0 0 0;
 }
 
 .title {
+  margin-bottom: 4vh;
   font-size: 4vh;
   text-align: center;
   text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.9);
 }
+
+.post-lists {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-lists>.list {
+  width: 50%;
+  padding: 2vw;
+  margin-bottom: 7vh;
+  background-color: #FFF;
+  border: 2px solid #008080;
+  border-radius: 15px;
+}
+
+.post-info {
+  background-color: #FFF;
+  color: black;
+  padding: 0 1vw;
+}
+
+.post-title {
+  font-size: 3vh;
+  font-weight: bold;
+  padding-bottom: 1.5vh;
+}
+
+.post-genre {
+  font-size: 2.5vh;
+  padding-bottom: 1.5vh;
+}
+
+.post-content {
+  font-size: 2.5vh;
+  border-top: 1px solid #dddddd;
+  padding: 1vh 0;
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
 // 投稿一覧
+
+// ダミー
+.post-dummy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dummy-title {
+  font-size: 3vh;
+  padding-bottom: 2vh;
+}
+
+.dummy-link {
+  font-size: 3vh;
+  padding-bottom: 3vh;
+}
+
+// /ダミー

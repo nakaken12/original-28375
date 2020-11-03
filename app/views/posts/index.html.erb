@@ -34,7 +34,42 @@
 <%# 投稿一覧 %>
 
 <div class='post-contents'>
-  <h2 class='title'>投稿一覧</h2>
+  <h2 class='title'>新着投稿</h2>
+    <ul class='post-lists'>
+      <% @posts.each do |post| %>
+
+      <%# 投稿のインスタンス変数になにか入っている場合、中身を展開 %>
+        <li class='list'>
+          <div class='post-info'>
+            <h3 class='post-title'>
+              <%= post.title.title_name %>
+            </h3>
+            <h2 class='post-genre'>
+              ジャンル : <%= post.genre.name %>
+            </h2>
+            <h3 class='post-content'>
+              <%= post.content %>
+            </h3>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </li>
+       <% end %>
+      <%# //投稿のインスタンス変数になにか入っている場合、中身を展開 %>
+
+      <%# 投稿がない場合のダミー %>
+      <% if @posts.length == 0 %>
+        <div class='post-dummy'>
+          <h3 class='dummy-title'>
+            まだ投稿はありません
+          </h3>
+          <%= link_to '新規投稿ページへ', new_post_path, class: "dummy-link"%>
+        </div>
+      <% end %>
+      <%# //投稿がない場合のダミー %>
+    </ul>
 </div>
 
 <%# 投稿一覧 %>
