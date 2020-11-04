@@ -13,7 +13,7 @@
       タイトル名
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :title_name, class:"title-text", id:"item-name", placeholder:"タイトル名（必須 40文字まで)", maxlength:"40" %>
+    <%= f.text_area :title_name, class:"title-text", id:"item-name", placeholder:"タイトル名", maxlength:"40" %>
     <%# タイトル名 %>
 
     <%# ジャンル %>
@@ -34,7 +34,7 @@
         鑑賞記録
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :content, class:"posts-text", id:"item-info", placeholder:"レビューを記入してください（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :content, class:"posts-text", id:"item-info", placeholder:"レビューを記入してください" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <%# /レビュー %>
 

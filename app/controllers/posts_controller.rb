@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_post, only: [:edit, :update]
-  
+
   def index
     @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(5)
   end
@@ -22,17 +22,15 @@ class PostsController < ApplicationController
 
   def edit
   end
-  
+
   def update
-    if params[:post][:title_name] != ""
+    if params[:post][:title_name] != ''
       @title = Title.find_by(title_name: params[:post][:title_name])
-      if @title == nil
-        @title = Title.create(title_name: params[:post][:title_name])
-      end
+      @title = Title.create(title_name: params[:post][:title_name]) if @title.nil?
       @post.title_id = @title.id
       @post.save
     end
-    if @post.update(post_params)   
+    if @post.update(post_params)
       redirect_to root_path
     else
       render :edit
@@ -61,5 +59,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-  
 end

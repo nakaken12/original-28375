@@ -1,5 +1,4 @@
 class PostTitle
-
   include ActiveModel::Model
   attr_accessor :title_name, :genre_id, :content, :user_id, :title_id
 
@@ -15,5 +14,4 @@ class PostTitle
     title.save
     Post.create(content: content, genre_id: genre_id, user_id: user_id, title_id: title.id)
   end
-
 end
