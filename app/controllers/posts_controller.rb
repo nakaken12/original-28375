@@ -46,6 +46,21 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    title = Title.search(params[:keyword])
+    if title.length != 0
+      @posts = Post.where(title_id: title.ids).order('created_at DESC').page(params[:page]).per(5)
+      posts = Post.where(title_id: title.ids)
+    elsif params[:keyword] != []
+      @posts = []
+      posts = []
+    else
+      @posts = Post.includes(:user).order('created_at DESC').page(params[:page]).per(5)
+      posts = Post.includes(:user)
+    end
+    @num = posts.length
+  end
+
   private
 
   def post_title_params
