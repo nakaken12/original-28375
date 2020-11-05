@@ -1,11 +1,61 @@
 <%# 上部バー部分 %>
 
 <div class='header'>
-  <%= link_to 'トップページ', "/", class: "header-left" %>
-  <%= link_to 'ジャンル', "#", class: "header-left" %>
-  <% if user_signed_in? %>
-    <%= link_to '投稿する', new_post_path, class: "header-left" %>
-  <% end %>
+  <%= link_to 'トップページ', "/", class: "header-left"  %>
+  <div id="parents", class="parents">
+    <%= link_to 'ジャンル', '#', id: "header-left-genre", class: 'header-left-genre' %>
+    <ul id="genre-lists", class="genre-lists hidden">
+      <li class="pull-down-list">
+        <%= link_to 'アニメ', '/genre/2', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'アクション', '/genre/3', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'アドベンチャー', '/genre/4', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'SF', '/genre/5', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'キッズ・ファミリー', '/genre/6', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'コメディ', '/genre/7', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'サスペンス', '/genre/8', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to '時代劇', '/genre/9', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to '青春', '/genre/10', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to '戦争', '/genre/11', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'ドキュメンタリー', '/genre/12', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'ドラマ', '/genre/13', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'ファンタジー', '/genre/14', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'ホラー', '/genre/15', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to 'ミュージカル・音楽', '/genre/16', class: "genre-list"%>
+      </li>
+      <li class="pull-down-list">
+        <%= link_to '恋愛', '/genre/17', class: "genre-list"%>
+      </li>
+    </ul>
+  </div>
+  <%= link_to '投稿する', new_post_path, class: "header-left" %>
   <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |f| %>
     <%= f.text_field :keyword, class:'input-box', placeholder: 'キーワードから探す' %>
     <button class="search-button">

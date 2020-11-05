@@ -8,4 +8,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  get 'genre/:id', to: 'posts#search_genre'
 end

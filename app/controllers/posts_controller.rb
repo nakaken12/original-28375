@@ -61,6 +61,12 @@ class PostsController < ApplicationController
     @num = posts.length
   end
 
+  def search_genre
+    @posts = Post.where(genre_id: params[:id]).includes(:user).order('created_at DESC').page(params[:page]).per(5)
+    posts = Post.where(genre_id: params[:id]).includes(:user)
+    @num = posts.length
+  end
+
   private
 
   def post_title_params

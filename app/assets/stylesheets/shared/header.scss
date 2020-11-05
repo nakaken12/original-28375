@@ -5,11 +5,41 @@
   align-items: center;
   justify-content: space-around;
   padding: 1vh 0;
+  height: 7vh;
 }
 
 .header-left {
   text-decoration: none;
   color: #fff;
+}
+
+.parents {
+  padding: 2vh 0;
+}
+
+.header-left-genre {
+  color: #fff;
+  margin: auto 0;
+}
+
+.genre-lists {
+  background-color: #fff;
+  position: absolute;
+  top: 7vh;
+  left: 17.5vw;
+  border: 1px solid #eeeeee;
+}
+
+.hidden {
+  display: none;
+}
+
+.pull-down-list {
+  padding: 5px 1vw;
+}
+
+.genre-list {
+  color: black;
 }
 
 .search-form {
