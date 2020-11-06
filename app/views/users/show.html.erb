@@ -19,14 +19,16 @@
                 <%= post.title.title_name %>
               </h3>
               <% if post.spoiler == true %>
-                <h2 class='spoiler-presence btn btn-danger'>ネタバレあり</h2>
+                <h2 class='btn btn-danger'>ネタバレあり</h2>
               <% end %>
             </div>
             <h2 class='post-genre'>
               ジャンル : <%= post.genre.name %>
             </h2>
             <% if post.spoiler == true %><details><% end %>
-              <% if post.spoiler == true %><summary role="button" aria-expanded="false">レビューを見る</summary><% end %>
+              <% if post.spoiler == true %>
+                <summary role="button" aria-expanded="false">レビューを見る</summary>
+              <% end %>
               <h3 class='post-content'>
                 <%= post.content %>
               </h3>

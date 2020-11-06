@@ -3,7 +3,7 @@ class PostTitle
   attr_accessor :title_name, :genre_id, :spoiler, :content, :user_id, :title_id
 
   # postモデルのバリデーション
-  STATUS_VALUES = ["true", "false"]
+  STATUS_VALUES = %w[true false].freeze
 
   validates :content, :genre_id, presence: true
   validates :spoiler, inclusion: { in: STATUS_VALUES }
