@@ -41,22 +41,30 @@
       <%# 投稿のインスタンス変数になにか入っている場合、中身を展開 %>
         <li class='list'>
           <div class='post-info'>
-            <h3 class='post-title'>
-              <%= post.title.title_name %>
-            </h3>
+            <div class='user-page'>
+              <a href="/users/<%= post.user.id %>"><%= post.user.nickname %></a>
+            </div>
+            <div class='parents-title-spoiler'>
+              <h3 class='post-title'>
+                <%= post.title.title_name %>
+              </h3>
+              <% if post.spoiler == true %>
+                <h2 class='spoiler-presence btn btn-danger'>ネタバレあり</h2>
+              <% end %>
+            </div>
             <h2 class='post-genre'>
               ジャンル : <%= post.genre.name %>
             </h2>
-            <h3 class='post-content'>
-              <%= post.content %>
-            </h3>
+            <% if post.spoiler == true %><details><% end %>
+              <% if post.spoiler == true %><summary role="button" aria-expanded="false">レビューを見る</summary><% end %>
+              <h3 class='post-content'>
+                <%= post.content %>
+              </h3>
+            <% if post.spoiler == true %></details><% end %>
             <% if user_signed_in? && current_user.email == post.user.email %>
               <%= link_to '編集', edit_post_path(post.id), method: :get, class: "btn btn-warning" %>
               <%= link_to '削除', post_path(post.id), method: :delete, class: "btn btn-danger" %>
             <% end %>
-            <div class='user-page'>
-              <a href="/users/<%= post.user.id %>"><%= post.user.nickname %></a>
-            </div>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>

@@ -87,6 +87,12 @@
 
 /* /ジャンル */
 
+/* ネタバレ */
+.posts-spoiler {
+  padding-bottom: 2vh;
+}
+/* /ネタバレ */
+
 /* レビュー */
 .posts-review {
   margin-top: 2vh;

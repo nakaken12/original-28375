@@ -9,7 +9,7 @@ describe Post do
 
   describe '投稿' do
     context '投稿が上手く行く時' do
-      it 'title_name、genre_id、contentが存在すれば投稿できる' do
+      it 'title_name、genre_id、spoiler、contentが存在すれば投稿できる' do
         expect(@post).to be_valid
       end
     end
@@ -24,7 +24,13 @@ describe Post do
       it 'genre_idが1では投稿できない' do
         @post.genre_id = 1
         @post.valid?
-        expect(@post.errors.full_messages).to include('Genre must be other than 1')
+        expect(@post.errors.full_messages).to include("Genre must be other than 1")
+      end
+
+      it 'spoilerが空では登録できない' do
+        @post.spoiler = ''
+        @post.valid?
+        expect(@post.errors.full_messages).to include("Spoiler is not included in the list")
       end
 
       it 'contentが空では投稿できない' do

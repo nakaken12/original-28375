@@ -17,7 +17,7 @@
 | Column  | Type     | Options     |
 | ------- | -------- | ----------- |
 | content | text   | null: false | 
-| spoiler | boolean |
+| spoiler | boolean | null: false, default: false |
 | rate | float |
 | genre_id | integer | null: false |
 | user  | references | null: false, foreign_key: true |

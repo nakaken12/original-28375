@@ -27,6 +27,19 @@
       </div>
     </div>
     <%# /ジャンル %>
+
+    <%# ネタバレ %>
+    <div class="posts-spoiler">
+      <div class="weight-bold-text">
+        ネタバレ
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.radio_button :spoiler, :true %>
+      <%= f.label :spoiler, "ネタバレあり", {value: :true} %>
+      <%= f.radio_button :spoiler, :false %>
+      <%= f.label :spoiler, "ネタバレなし", {value: :false} %>
+    </div>    
+    <%# /ネタバレ %>
       
     <%# /レビュー %>
     <div class="posts-review">

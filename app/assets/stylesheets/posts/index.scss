@@ -106,31 +106,52 @@
   padding: 0 1vw;
 }
 
+.user-page {
+  font-size: 2.5vh;
+  padding-bottom: 1vh;
+}
+
+.parents-title-spoiler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .post-title {
   font-size: 3vh;
   font-weight: bold;
   padding-bottom: 1.5vh;
 }
 
+.spoiler-presence {
+  padding-bottom: 1.5vh;
+}
+
 .post-genre {
   font-size: 2.5vh;
   padding-bottom: 1.5vh;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 1vh;
+}
+
+details {
+  margin: 1vh 0;
+}
+
+summary {
+  display: block;
+  outline: none;
 }
 
 .post-content {
   font-size: 2.5vh;
-  border-top: 1px solid #dddddd;
   padding: 1vh 0;
-}
-
-.user-page {
-  font-size: 2.5vh;
-  padding-bottom: 1vh;
 }
 
 .star-btn {
   display: flex;
   align-items: center;
+  margin-top: 2vh;
 }
 
 .star-icon {

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_10_29_133925) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
-    t.boolean "spoiler"
+    t.boolean "spoiler", default: false, null: false
     t.float "rate"
     t.integer "genre_id", null: false
     t.bigint "user_id", null: false
