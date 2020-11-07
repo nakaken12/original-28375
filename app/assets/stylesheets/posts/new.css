@@ -87,6 +87,18 @@
 
 /* /ジャンル */
 
+/* スコア */
+.jquery-raty {
+  padding-bottom: 4vh;
+}
+
+.rate-titile {
+  font-weight: bold;
+  margin-right: 5px;
+}
+/* /スコア */
+
+
 /* ネタバレ */
 .posts-spoiler {
   padding-bottom: 2vh;

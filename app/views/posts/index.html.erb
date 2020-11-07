@@ -52,6 +52,35 @@
                 <h2 class='btn btn-danger'>ネタバレあり</h2>
               <% end %>
             </div>
+            <% if post.rate != nil %>
+              <div class='parents-rate'>
+                <div class='head-rate'>
+                  <div id="star-rate-<%= post.id %>"></div>
+                  <script>
+                  $('#star-rate-<%= post.id %>').raty({
+                    size: 36,
+                    starOff:  '<%= asset_path('star-off.png') %>',
+                    starOn : '<%= asset_path('star-on.png') %>',
+                    starHalf: '<%= asset_path('star-half.png') %>',
+                    half: true,
+                    readOnly: true,
+                    score: <%= post.rate %>,
+                  });
+                  </script>
+                </div>
+                <div class='foot-rate'>
+                  <%= post.rate %>
+                </div>
+              </div>
+            <% else %>
+              <div class='rate-none'>
+                <%= image_tag 'star-off.png' %>
+                <%= image_tag 'star-off.png' %>
+                <%= image_tag 'star-off.png' %>
+                <%= image_tag 'star-off.png' %>
+                <%= image_tag 'star-off.png' %>
+              </div>
+            <% end %>
             <h2 class='post-genre'>
               ジャンル : <%= post.genre.name %>
             </h2>

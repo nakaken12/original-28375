@@ -29,6 +29,23 @@
     <%# /ジャンル %>
 
     <%# スコア %>
+    <div class='jquery-raty'>
+      <div class="" id="star">
+        <%= f.label :rate,'評価 :', class:'rate-titile' %>
+        <%= f.hidden_field :rate, id: :review_star %>
+      </div>
+
+      <script>
+      $('#star').raty({
+        size     : 36,
+        starOff:  '<%= asset_path('star-off.png') %>',
+        starOn : '<%= asset_path('star-on.png') %>',
+        starHalf: '<%= asset_path('star-half.png') %>',
+        scoreName: 'post_title[rate]',
+        half: true,
+      });
+      </script>
+    </div>  
     <%# /スコア %>
 
     <%# ネタバレ %>
