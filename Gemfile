@@ -71,3 +71,5 @@ gem 'pry-rails'
 gem 'active_hash'
 
 gem 'kaminari'
+
+gem 'jquery-rails'
