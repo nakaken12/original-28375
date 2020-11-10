@@ -73,3 +73,5 @@ gem 'active_hash'
 gem 'kaminari'
 
 gem 'jquery-rails'
+
+gem 'rails-i18n'
