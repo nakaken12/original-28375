@@ -11,14 +11,9 @@
             <div class='user-page'>
               <a href="/users/<%= post.user.id %>"><%= post.user.nickname %></a>
             </div>
-            <div class='parents-title-spoiler'>
-              <h3 class='post-title'>
-                <%= post.title.title_name %>
-              </h3>
-              <% if post.spoiler == true %>
-                <h2 class='btn btn-danger'>ネタバレあり</h2>
-              <% end %>
-            </div>
+            <h3 class='post-title'>
+              <%= post.title.title_name %>
+            </h3>
             <% if post.rate != nil %>
               <div class='parents-rate'>
                 <div class='head-rate'>
