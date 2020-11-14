@@ -53,7 +53,7 @@
             </h2>
             <% if post.spoiler == true %><details><% end %>
               <% if post.spoiler == true %>
-                <summary role="button" aria-expanded="false">レビューを見る</summary>
+                <summary role="button" aria-expanded="false" class='netabare'>このレビューはネタバレを含みます</summary>
               <% end %>
               <h3 class='post-content'>
                 <%= post.content %>
