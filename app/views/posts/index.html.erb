@@ -91,10 +91,6 @@
               <%= link_to '編集', edit_post_path(post.id), method: :get, class: "btn btn-warning" %>
               <%= link_to '削除', post_path(post.id), method: :delete, class: "btn btn-danger" %>
             <% end %>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
           </div>
         </li>
        <% end %>
