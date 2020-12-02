@@ -38,7 +38,7 @@ https://original-app-films.herokuapp.com/
 <br>
 
 # 機能紹介
-### トップページ/投稿一覧表示
+### トップページ・投稿一覧表示
 
 <br>
 
@@ -63,22 +63,29 @@ https://original-app-films.herokuapp.com/
 <br>
 
 # 使用技術
-・ HTML
-・ CSS
-・ SCSS
-・ Ruby
-・ Ruby on Rails
-・ JavaScript
-・ MySQL
-・ Bootstrap
-・ VSCode (Visual Studio Code)
-・ GitHub
+・ HTML<br>
+・ CSS<br>
+・ SCSS<br>
+・ Ruby<br>
+・ Ruby on Rails<br>
+・ JavaScript<br>
+・ MySQL<br>
+・ Bootstrap<br>
+・ VSCode (Visual Studio Code)<br>
+・ GitHub<br>
+・ Heroku<br>
 
 
 <br>
 
 # 課題や今後実装したい機能
+### レスポンシブ対応
+PCだけではなくスマホからの利用も想定されるので、スマホからのアクセスにも対応したレイアウトにしたい。
 
+<br>
+
+### ユーザー間の交流機能
+現状、ユーザー同士が交流することのできる機能がないので、他のユーザーの投稿に対していいねを送るなどの機能を取り入れたい。
 
 <br>
 
