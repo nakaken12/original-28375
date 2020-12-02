@@ -38,11 +38,41 @@ https://original-app-films.herokuapp.com/
 <br>
 
 # 機能紹介
+### トップページ/投稿一覧表示
 
+<br>
+
+### 新規登録・ログイン
+
+<br>
+
+### 新規投稿
+
+<br>
+
+### 評価機能
+
+<br>
+
+### ネタバレ機能
+
+<br>
+
+### 検索機能
 
 <br>
 
 # 使用技術
+・ HTML
+・ CSS
+・ SCSS
+・ Ruby
+・ Ruby on Rails
+・ JavaScript
+・ MySQL
+・ Bootstrap
+・ VSCode (Visual Studio Code)
+・ GitHub
 
 
 <br>
