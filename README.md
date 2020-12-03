@@ -45,10 +45,16 @@ https://original-app-films.herokuapp.com/
 スクロールしていくと、Filmsの紹介文と新着投稿を閲覧することができます。投稿は新着順に並んでおり、トップページでは最新5件の投稿が表示されています。その他の投稿はページネーションによって2ページ目以降で管理されています。  
 また、ユーザー自らの投稿には編集ボタンと削除ボタンが表示されます。
 
+![pagination](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/pagination.gif)
+
 <br>
 
 ### 新規登録・ログイン
 新規登録・ログインができます。これらのユーザー管理にはdeviseを使用しています。
+
+<img width="1438" alt="sign-up.png" src="https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/sign-up.png">
+
+<img width="1438" alt="login.png" src="https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/login.png">
 
 <br>
 
@@ -56,15 +62,21 @@ https://original-app-films.herokuapp.com/
 投稿機能の利用には、ログインしている必要があります。  
 それぞれの項目を記入して「投稿する」ボタンを押します。タイトル名、ジャンル、ネタバレの有無、鑑賞記録欄の記入は必須です。
 
+<img width="1438" alt="new-post.png" src="https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/new-post.png">
+
 <br>
 
 ### 評価機能
 新規投稿画面の評価項目で、鑑賞した映画のオススメ度を星の数で入力することができます。星の数は0〜5つで、0.5刻みとなっています。新規投稿画面で入力した星の数による評価は、投稿一覧から確認できます。
 
+![star-review](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/star-review.gif)
+
 <br>
 
 ### ネタバレ機能
 新規投稿画面のネタバレ項目で「ネタバレあり」を選択すると、一覧ページで表示された投稿の鑑賞記録欄に「このレビューはネタバレを含みます」と、赤文字のメッセージが表示されます。これは、意図せずにストーリー内容を知ってしまうのを防ぐ為です。続けて内容を閲覧したい場合は、このメッセージをクリックします。
+
+![spoiler](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/spoiler.gif)
 
 <br>
 
@@ -74,17 +86,25 @@ https://original-app-films.herokuapp.com/
 #### ジャンル別検索機能
 ヘッダーの「ジャンル」にマウスオーバーすると、様々なジャンルの一覧が表示されます。気になるジャンル名をクリックすると、条件と一致する投稿一覧が表示されます。
 
+![genre](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/genre.gif)
+
 #### キーワード検索機能
 ヘッダー部中央の入力欄にキーワードを入力し検索ボタンを押すと、キーワードを含む投稿一覧が表示されます。
+
+![keyword](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/keyword.gif)
 
 <br>
 
 ### マイページ機能
 ログインしている場合、ヘッダー部右側に表示されているユーザー名がマイページボタンとなっています。クリックすると過去の投稿を振り返ることができます。
 
+![user-page](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/user-page.gif)
+
 <br>
 
 他のユーザーの過去の投稿を閲覧したい場合は、投稿一覧ページに表示されているユーザー名をクリックします。
+
+![else-user-page](https://raw.githubusercontent.com/nakaken12/original-28375/df005111fe995ebd52aee7a84b1956924ab4b126/else-user-page.gif)
 
 <br>
 
